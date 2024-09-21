@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eletiva Programação WEB</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #4b6cb7, #182848);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-style: italic;
+            margin-bottom: 40px;
+            color: #e0e0e0;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .menu-wrapper {
+            display: flex;
+            gap: 30px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .menu-container {
+            position: relative;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .submenu {
+            display: block;
+            position: absolute;
+            left: 0;
+            background-color: rgba(0, 123, 255, 0.8);
+            border-radius: 12px;
+            padding: 0;
+            margin-top: 5px;
+            overflow-y: auto;
+            max-height: 200px;
+            height: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: height 0.5s ease, opacity 0.5s ease, visibility 0.5s;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            z-index: 10;
+        }
+
+        .menu-container li:hover .submenu {
+            height: 200px;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .submenu li {
+            margin: 0;
+            display: block;
+        }
+
+        a {
+            font-size: 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 12px;
+            background-color: #007bff;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 123, 255, 0.3);
+            display: block;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 86, 179, 0.4);
+        }
+
+        a:active {
+            transform: translateY(0);
+            box-shadow: 0 6px 10px rgba(0, 86, 179, 0.2);
+        }
+
+        .submenu::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .submenu::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 5px;
+        }
+
+        .submenu::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Eletiva Programação WEB</h1>
+    <h2>Tharson Turbuk Silva</h2>
+    
+    <div class="menu-wrapper">
+        <div class="menu-container">
+            <ul>
+                <li>
+                    <a href="#">Exercícios da Revisão</a>
+                    <ul class="submenu">
+                        <li><a href="Exercicios-Revisao/Exercicio01/exer01.php">Exercício 01</a></li>
+                        <li><a href="Exercicios-Revisao/Exercicio02/exer02.php">Exercício 02</a></li>
+                        <li><a href="Exercicios-Revisao/Exercicio03/exer03.php">Exercício 03</a></li>
+                        <li><a href="Exercicios-Revisao/Exercicio04/exer04.php">Exercício 04</a></li>
+                        <li><a href="Exercicios-Revisao/Exercicio05/exer05.php">Exercício 05</a></li>
+                        <li><a href="Exercicios-Revisao/Exercicio06/exer06.php">Exercício 06</a></li>
+                        <li><a href="Exercicios-Revisao/Exercicio07/exer07.php">Exercício 07</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-container">
+            <ul>
+                <li>
+                    <a href="#">Exercícios da Lista 2</a>
+                    <ul class="submenu">
+                        <li><a href="Exercicios-da-aula/Lista2/Exercicio01/exer01.php">Exercício 01</a></li>
+                        <li><a href="Exercicios-da-aula/Lista2/Exercicio02/exer02.php">Exercício 02</a></li>
+                        <li><a href="Exercicios-da-aula/Lista2/Exercicio03/exer03.php">Exercício 03</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-container">
+            <ul>
+                <li>
+                    <a href="#">Exercícios da Lista 3</a>
+                    <ul class="submenu">
+                        <li><a href="Exercicios-aula/Lista2/Exercicio01/exer01.php">Exercício 01</a></li>
+                        <li><a href="Exercicios-aula/Lista2/Exercicio02/exer02.php">Exercício 02</a></li>
+                        <li><a href="Exercicios-aula/Lista2/Exercicio03/exer03.php">Exercício 03</a></li>
+                        <li><a href="Exercicios-aula/Lista2/Exercicio01/exer04.php">Exercício 04</a></li>
+                        <li><a href="Exercicios-aula/Lista2/Exercicio02/exer05.php">Exercício 05</a></li>
+                        <li><a href="Exercicios-aula/Lista2/Exercicio03/exer06.php">Exercício 06</a></li>
+                        <li><a href="Exercicios-aula/Lista2/Exercicio01/exer07.php">Exercício 07</a></li>
+                        <li><a href="Exercicios-aula/Lista2/Exercicio02/exer08.php">Exercício 08</a></li>
+                        <li><a href="Exercicios-aula/Lista2/Exercicio03/exer09.php">Exercício 09</a></li>
+                        <li><a href="Exercicios-aula/Lista2/Exercicio01/exer10.php">Exercício 10</a></li>
+                        <li><a href="Exercicios-aula/Lista2/Exercicio02/exer11.php">Exercício 11</a></li>
+                        <li><a href="Exercicios-aula/Lista2/Exercicio03/exer12.php">Exercício 12</a></li>
+                        <li><a href="Exercicios-aula/Lista2/Exercicio01/exer13.php">Exercício 13</a></li>
+                        <li><a href="Exercicios-aula/Lista2/Exercicio02/exer14.php">Exercício 14</a></li>
+                        <li><a href="Exercicios-aula/Lista2/Exercicio03/exer15.php">Exercício 15</a></li>
+                        <li><a href="Exercicios-aula/Lista2/Exercicio01/exer16.php">Exercício 16</a></li>
+                        <li><a href="Exercicios-aula/Lista2/Exercicio02/exer17.php">Exercício 17</a></li>
+                        <li><a href="Exercicios-aula/Lista2/Exercicio03/exer18.php">Exercício 18</a></li>
+                        <li><a href="Exercicios-aula/Lista2/Exercicio01/exer19.php">Exercício 19</a></li>
+                        <li><a href="Exercicios-aula/Lista2/Exercicio02/exer20.php">Exercício 20</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+
+</body>
+</html>
